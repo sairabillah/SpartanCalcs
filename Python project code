@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+plt.style.use('classic')
+spartan_file = 'spartan.csv'
+df_pop = pd.read_csv(spartan_file)
+df_pop_PKA = df_pop.set_index('PKA')
+df_pop_PKA.plot(kind='bar', xlabel = 'PKA', ylabel = 'Max Electrostatic Potential Map')
